@@ -1,1 +1,3 @@
 ### A repository containing different solutions from JS exercises found on different websites (the source will be mentioned).
+#### It took the folm of a multipage website built only with HTML, CSS and Javascript.
+#### Each link on the front page goes to one of the exercises and my solution.
