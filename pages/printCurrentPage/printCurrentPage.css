@@ -33,6 +33,7 @@ a {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  box-shadow: 5px 10px;
 }
 
 #homeButton {

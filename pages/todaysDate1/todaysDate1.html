@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Today's Date</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./todaysDate1.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet" />
+  </head>
 
-<head>
-	<title>Today's Date</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="src/styles.css" />
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-</head>
-
-<body>
-	<div id="app">
-	<div id="square1">
-		<div id="square2">
-		<div id="square3">
-		<div>
-			<button id="button" onClick={showDate()}>GET DATE</button>
-		<div>
-		<p id="target"></p>
-		</div>
-	</div>
-</div>
-	</div>
-
-	<script src="src/index.js">
-	</script>
-</body>
-
+  <body>
+    <div id="app">
+      <p>Write a JavaScript program to get the current date.</p>
+      <p>Expected Output : <b>mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy</b>.</p>
+      <div id="square1">
+        <div id="square2">
+          <div id="square3">
+            <div>
+              <button id="button" onClick="{showDate()}">GET DATE</button>
+            </div>
+            <p id="target"></p>
+          </div>
+        </div>
+      </div>
+      <button id="homeButton"><a href="../../index.html"> << BACK</a></button>
+    </div>
+    <script src="./todaysDate1.js"></script>
+  </body>
 </html>

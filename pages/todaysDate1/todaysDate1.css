@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #af2bbf;
+  background-color: #f2e863;
 }
 
 #app {
@@ -26,30 +26,39 @@ body {
   cursor: pointer;
   font-size: 1rem;
   margin-bottom: 1rem;
+  box-shadow: 5px 10px;
 }
 
 #square1 {
-  border: 3px solid #5bc8af;
-  background-color: white;
+  background-color: F8F7FF;
   padding: 3rem;
   height: auto;
-}
-
-#square1:hover {
-  padding: 6rem;
+  margin-top: 1.5rem;
 }
 
 #square2 {
   padding: 3rem;
-  background-color: #af2bbf;
-  border: 3px solid #5bc8af;
-}
-#square2:hover {
-  padding: 6rem;
+  background-color: #f2e863;
 }
 
 #square3 {
   padding: 3rem;
-  background-color: white;
-  border: 3px solid #5bc8af;
+  background-color: #fff;
+}
+
+#homeButton {
+  padding: 0.3rem 2rem;
+  position: absolute;
+  bottom: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+b {
+  background-color: #61e8e1;
+  padding: 0.2rem;
+}
+
+p:nth-child(1) {
+  margin-bottom: 0.8rem;
 }
