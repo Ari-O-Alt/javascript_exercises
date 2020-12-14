@@ -6,21 +6,25 @@ function changeBgImage() {
   let imgUrl = triangleImage.style.backgroundImage;
 
   switch (imgUrl) {
-    case 'url("src/images/TB.png")':
-      triangleImage.style.backgroundImage = "url('src/images/TRed.png')";
+    case 'url("../../images/TB.png")':
+      triangleImage.style.backgroundImage = "url('../../images/TRed.png')";
       imgUrl = triangleImage.style.backgroundImage;
+      console.log(1);
       break;
-    case 'url("src/images/TRed.png")':
-      triangleImage.style.backgroundImage = "url('src/images/TBlue.png')";
+    case 'url("../../images/TRed.png")':
+      triangleImage.style.backgroundImage = "url('../../images/TBlue.png')";
       imgUrl = triangleImage.style.backgroundImage;
+      console.log(2);
       break;
-    case 'url("src/images/TBlue.png")':
-      triangleImage.style.backgroundImage = "url('src/images/TOrange.png')";
+    case 'url("../../images/TBlue.png")':
+      triangleImage.style.backgroundImage = "url('../../images/TOrange.png')";
       imgUrl = triangleImage.style.backgroundImage;
+      console.log(3);
       break;
-    case 'url("src/images/TOrange.png")':
-      triangleImage.style.backgroundImage = "url('src/images/TB.png')";
+    case 'url("../../images/TOrange.png")':
+      triangleImage.style.backgroundImage = "url('../../images/TB.png')";
       imgUrl = triangleImage.style.backgroundImage;
+      console.log(4);
       break;
     default:
       break;
