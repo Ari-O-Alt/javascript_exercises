@@ -48,9 +48,12 @@ function calculateArea(string) {
   const num3 = finalArray[2];
 
   const result = num1 * num2 * num3;
-  console.log(result);
+  changeBgImage(window.event);
+  textTarget.innerHTML = result;
+
   return result;
 }
 
+// add event listener to the calculation button
 const calcButton = document.getElementById('calc');
 calcButton.addEventListener('click', () => calculateArea(text));
