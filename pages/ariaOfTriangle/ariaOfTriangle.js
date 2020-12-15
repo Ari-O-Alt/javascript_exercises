@@ -50,6 +50,7 @@ const calcButton = document.getElementById('calc');
 calcButton.addEventListener('click', () => calculateArea(text));
 
 const calculateArea = (string) => {
+  changeBgImage();
   if (string) {
     const stringToArray = string.split('');
     const finalArray = stringToArray.filter((char) => char !== ' ' && char !== 'X');
@@ -59,10 +60,12 @@ const calculateArea = (string) => {
 
     const result = num1 * num2 * num3;
     textTarget.innerHTML = result;
-    text = ' '; // reset the text variable
-    arrayToPushTo = []; // reset the array which holds the buttons' values
+
+    text = ' ';
+    arrayToPushTo = [];
+
     return result;
   } else {
-    alert('Please select a number');
+    console.log('Please select a number');
   }
 };
