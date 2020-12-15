@@ -31,7 +31,7 @@ function changeBgImage() {
 
 function printNumberToPage(event) {
   changeBgImage();
-  text += event.target.value + ' ';
+  arrayToPushTo.length > 1 ? (text += event.target.value + ' ') : (text += event.target.value + ' ' + 'X' + ' ');
   arrayToPushTo.push(event.target.value);
   textTarget.innerHTML = text;
 
@@ -48,7 +48,7 @@ elements.forEach(function (element) {
 
 function calculateArea(string) {
   const stringToArray = string.split('');
-  const finalArray = stringToArray.filter((char) => char !== ' ');
+  const finalArray = stringToArray.filter((char) => char !== ' ' && char !== 'X');
   const num1 = finalArray[0];
   const num2 = finalArray[1];
   const num3 = finalArray[2];

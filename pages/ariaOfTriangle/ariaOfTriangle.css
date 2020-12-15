@@ -51,9 +51,10 @@ img {
 #textTarget {
   position: absolute;
   bottom: 20%;
-  background-color: #fff;
   height: 3rem;
-  width: 6.5rem;
+  width: 15rem;
+  background-color: #fff;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,12 +65,18 @@ img {
 #calc {
   position: absolute;
   bottom: 15rem;
-  padding: 0.5rem 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
   background-color: #8447ff;
   color: #fff;
   border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px, inset rgba(0, 0, 0, 0.2) 0px -1px 2px;
+}
+
+#calc:hover {
+  background-color: #065a82;
 }
 
 #homeButton {
@@ -82,4 +89,16 @@ img {
 
 #homeButton a {
   text-decoration: none;
+}
+
+#requierments {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1rem;
+  padding: 0.3rem;
+  border: 1px solid #000;
+  width: 400px;
+  height: auto;
+  text-align: left;
 }
