@@ -46,3 +46,8 @@ img {
   position: absolute;
   bottom: 20%;
 }
+
+#textTarget {
+  position: absolute;
+  bottom: 5rem;
+}
