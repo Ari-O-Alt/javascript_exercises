@@ -3,7 +3,7 @@ const textTarget = document.getElementById('textTarget');
 let text = textTarget.innerHTML;
 let arrayToPushTo = [];
 
-function changeBgImage() {
+const changeBgImage = () => {
   const triangleImage = document.getElementById('triangle');
   let imgUrl = triangleImage.style.backgroundImage;
 
@@ -27,9 +27,9 @@ function changeBgImage() {
     default:
       break;
   }
-}
+};
 
-function printNumberToPage(event) {
+const printNumberToPage = (event) => {
   changeBgImage();
   arrayToPushTo.length > 1 ? (text += event.target.value + ' ') : (text += event.target.value + ' ' + 'X' + ' ');
   arrayToPushTo.push(event.target.value);
@@ -40,25 +40,29 @@ function printNumberToPage(event) {
       element.disabled = true;
     });
   }
-}
+};
 
 elements.forEach(function (element) {
   element.addEventListener('click', printNumberToPage);
 });
 
-function calculateArea(string) {
-  const stringToArray = string.split('');
-  const finalArray = stringToArray.filter((char) => char !== ' ' && char !== 'X');
-  const num1 = finalArray[0];
-  const num2 = finalArray[1];
-  const num3 = finalArray[2];
-
-  const result = num1 * num2 * num3;
-  printNumberToPage(window.event);
-  textTarget.innerHTML = result;
-  text = '';
-  return result;
-}
-
 const calcButton = document.getElementById('calc');
 calcButton.addEventListener('click', () => calculateArea(text));
+
+const calculateArea = (string) => {
+  if (string) {
+    const stringToArray = string.split('');
+    const finalArray = stringToArray.filter((char) => char !== ' ' && char !== 'X');
+    const num1 = finalArray[0];
+    const num2 = finalArray[1];
+    const num3 = finalArray[2];
+
+    const result = num1 * num2 * num3;
+    textTarget.innerHTML = result;
+    text = ' '; // reset the text variable
+    arrayToPushTo = []; // reset the array which holds the buttons' values
+    return result;
+  } else {
+    alert('Please select a number');
+  }
+};
