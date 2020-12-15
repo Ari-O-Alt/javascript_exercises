@@ -64,6 +64,10 @@ const calculateArea = (string) => {
     text = ' ';
     arrayToPushTo = [];
 
+    elements.forEach((element) => {
+      element.disabled = false;
+    });
+
     return result;
   } else {
     console.log('Please select a number');
