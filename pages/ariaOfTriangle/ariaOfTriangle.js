@@ -1,15 +1,11 @@
 const elements = document.querySelectorAll('.side');
-
 const textTarget = document.getElementById('textTarget');
 let text = textTarget.innerHTML;
+let arrayToPushTo = [];
 
-function changeBgImage(event) {
+function changeBgImage() {
   const triangleImage = document.getElementById('triangle');
   let imgUrl = triangleImage.style.backgroundImage;
-
-  // print the number on the button to the page
-  text += event.target.value + ' ';
-  textTarget.innerHTML = text;
 
   switch (imgUrl) {
     case 'url("../../images/TB.png")':
@@ -33,27 +29,36 @@ function changeBgImage(event) {
   }
 }
 
+function printNumberToPage(event) {
+  changeBgImage();
+  text += event.target.value + ' ';
+  arrayToPushTo.push(event.target.value);
+  textTarget.innerHTML = text;
+
+  if (arrayToPushTo.length > 2) {
+    elements.forEach((element) => {
+      element.disabled = true;
+    });
+  }
+}
+
 elements.forEach(function (element) {
-  element.addEventListener('click', changeBgImage);
+  element.addEventListener('click', printNumberToPage);
 });
 
-// function to calculate the area ot the triangle
 function calculateArea(string) {
   const stringToArray = string.split('');
-
   const finalArray = stringToArray.filter((char) => char !== ' ');
-
   const num1 = finalArray[0];
   const num2 = finalArray[1];
   const num3 = finalArray[2];
 
   const result = num1 * num2 * num3;
-  changeBgImage(window.event);
+  printNumberToPage(window.event);
   textTarget.innerHTML = result;
-
+  text = '';
   return result;
 }
 
-// add event listener to the calculation button
 const calcButton = document.getElementById('calc');
 calcButton.addEventListener('click', () => calculateArea(text));

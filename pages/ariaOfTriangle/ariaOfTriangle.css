@@ -56,3 +56,11 @@ img {
   position: absolute;
   bottom: 15rem;
 }
+
+#homeButton {
+  padding: 0.3rem 2rem;
+  position: absolute;
+  bottom: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
