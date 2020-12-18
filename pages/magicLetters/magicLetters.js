@@ -26,7 +26,20 @@ const printArrayToPage = (theString) => {
   });
 };
 
-window.onload(printArrayToPage('HELLO WORLD!'));
+// print the letters on the page when the page is loaded
+window.onload = function () {
+  printArrayToPage('HELLO WORLD!');
+};
+
+const moveLetter = (event) => {
+  const target = event.target;
+  console.log(target);
+};
+
+const allLetters = document.querySelectorAll('.letter');
+allLetters.forEach((element) => element.addEventListener('click', moveLetter, { once: true }));
+const allSpaces = document.querySelectorAll('emptySpace');
+allSpaces.forEach((element) => element.addEventListener('click', moveLetter, { once: true }));
 // button.addEventListener('click', () => reverseArray('Hello world'));
 /* let rest = stringToArray.splice(0, 1);
     stringToArray.push(...rest);
