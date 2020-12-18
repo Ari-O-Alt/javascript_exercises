@@ -20,4 +20,18 @@
   text-align: center;
   line-height: 50px;
   cursor: pointer;
+  margin: 0px 0.5rem;
+}
+
+.emptySpace {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+#button {
+  position: absolute;
+  bottom: 30%;
 }
