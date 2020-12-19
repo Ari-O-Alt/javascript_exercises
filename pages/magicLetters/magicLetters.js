@@ -8,7 +8,7 @@ const convertString = (string) => {
 };
 
 // cobvert the string to array
-const stringToArray = convertString('Hello world!');
+let stringToArray = convertString('Hello world!');
 
 // create function that print the content of an array to the page
 const printArrayToPage = (string) => {
@@ -34,10 +34,9 @@ window.onload = printArrayToPage(stringToArray);
 
 // create function that makes a letter dissapear when clicked and it gets attached to the end of the array
 const moveLetter = (event) => {
-  const targetLetter = event.target;
-  console.log(targetLetter);
-  targetLetter.classList.add('invisible');
-  stringToArray.push(targetLetter);
+  const targetLetter = event.target; // target the clicked div
+  const parent = targetLetter.parentNode; // target the parent node of the clicked div -- app
+  parent.appendChild(targetLetter); // append the clicked div to the parent -- goes at the end
 };
 
 // select all letters/ buttons and add event listeners to them
