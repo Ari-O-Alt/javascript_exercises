@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Major Mono Display', monospace;
 }
 
 #app {
@@ -12,20 +13,34 @@
   text-align: center;
 }
 
+.instructions {
+  border: 1px solid #000;
+  position: absolute;
+  top: 15%;
+  max-width: 60%;
+  padding: 1rem 0.3rem;
+  text-align: left;
+}
+
+.instructions p:nth-child(1) {
+  margin-bottom: 0.7rem;
+}
+
 .letter {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
   background-color: pink;
   text-align: center;
-  line-height: 50px;
+  line-height: 80px;
   cursor: pointer;
   margin: 0px 0.5rem;
+  font-size: 1.5rem;
 }
 
 .emptySpace {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   background-color: white;
   border-radius: 50%;
   border: 1px solid pink;
