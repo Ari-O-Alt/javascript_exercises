@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Major Mono Display', monospace;
+}
+
+body {
+  background-color: #f2e863;
+}
+
+#app {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#homeButton {
+  padding: 0.3rem 2rem;
+  position: absolute;
+  bottom: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+}
