@@ -9,6 +9,7 @@ const answer = 8;
 console.log(answer);
 
 const button = document.getElementById('button');
+const textTarget = document.getElementById('textTarget');
 
 const printInput = () => {
   let input = document.getElementById('userInput').value;
@@ -18,16 +19,17 @@ const printInput = () => {
   let userAnswer;
 
   if (userInput === answer) {
-    console.log('The answer is correct');
     userAnswer = userInput;
+    const text = document.createTextNode('Good Work! The answer is correct!');
+    textTarget.appendChild(text);
   } else if (userInput < answer) {
-    console.log(`The correct number is bigger than ${userInput}`);
     min = userInput + 1;
-    console.log(`The correct answer is between ${min} and ${max}`);
+    const text = document.createTextNode(`Not matched! The correct number is bigger than ${userInput} and is between ${min} and ${max}!`);
+    textTarget.appendChild(text);
   } else {
-    console.log(`The correct number is smaller than ${userInput}`);
     max = userInput - 1;
-    console.log(`The correct answer is between ${min} and ${max}`);
+    const text = document.createTextNode(`Not matched! The correct number is smaller than ${userInput} and is between ${min} and ${max}!`);
+    textTarget.appendChild(text);
   }
   document.getElementById('userInput').value = ' ';
   return userAnswer;
