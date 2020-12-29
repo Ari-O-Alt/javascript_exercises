@@ -25,3 +25,8 @@ body {
   background-color: #fff;
   border-radius: 5px;
 }
+
+#request {
+  max-width: 60%;
+  margin-bottom: 4rem;
+}

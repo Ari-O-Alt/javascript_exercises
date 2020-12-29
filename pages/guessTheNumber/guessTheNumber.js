@@ -8,17 +8,17 @@ console.log(max);
 const answer = 8;
 console.log(answer);
 
-const button = document.getElementById("button");
+const button = document.getElementById('button');
 
 const printInput = () => {
-  const input = document.getElementById("userInput").value;
+  let input = document.getElementById('userInput').value;
   const userInput = parseInt(input, 10);
   console.log(userInput);
 
   let userAnswer;
 
   if (userInput === answer) {
-    console.log("The answer is correct");
+    console.log('The answer is correct');
     userAnswer = userInput;
   } else if (userInput < answer) {
     console.log(`The correct number is bigger than ${userInput}`);
@@ -29,8 +29,8 @@ const printInput = () => {
     max = userInput - 1;
     console.log(`The correct answer is between ${min} and ${max}`);
   }
-
+  document.getElementById('userInput').value = ' ';
   return userAnswer;
 };
 
-button.addEventListener("click", printInput);
+button.addEventListener('click', printInput);
