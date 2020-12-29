@@ -1,36 +1,35 @@
-const numberArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(numberArray);
+// define the variables that will keep track of our values
 let min = 0;
-console.log(min);
 let max = 10;
-console.log(max);
-
 const answer = 8;
-console.log(answer);
 
+// target elements by id
 const button = document.getElementById('button');
 const textTarget = document.getElementById('textTarget');
 
 const printInput = () => {
-  let input = document.getElementById('userInput').value;
-  const userInput = parseInt(input, 10);
-  console.log(userInput);
+  let input = document.getElementById('userInput').value; // we capture the user input
+  const userInput = parseInt(input, 10); // we make sure the user input is an integer
 
   let userAnswer;
 
   if (userInput === answer) {
     userAnswer = userInput;
     const text = document.createTextNode('Good Work! The answer is correct!');
+    textTarget.innerHTML = ' ';
     textTarget.appendChild(text);
   } else if (userInput < answer) {
     min = userInput + 1;
     const text = document.createTextNode(`Not matched! The correct number is bigger than ${userInput} and is between ${min} and ${max}!`);
+    textTarget.innerHTML = ' ';
     textTarget.appendChild(text);
   } else {
     max = userInput - 1;
     const text = document.createTextNode(`Not matched! The correct number is smaller than ${userInput} and is between ${min} and ${max}!`);
+    textTarget.innerHTML = ' ';
     textTarget.appendChild(text);
   }
+
   document.getElementById('userInput').value = ' ';
   return userAnswer;
 };
